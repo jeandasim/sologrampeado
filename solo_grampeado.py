@@ -70,6 +70,21 @@ def calcular_qs(referencias, n_spt, d_furo):
     return results, Bond_str
 
 def main():
+    # Adicionando o código do Google Analytics
+    st.markdown(
+        """
+        <script async src="https://www.googletagmanager.com/gtag/js?id=SEU_ID_ANALYTICS"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-J47G8X3JRX');
+        </script>
+        """
+        , unsafe_allow_html=True
+    )
+
     st.header('Dimensionamento de Grampos', divider='rainbow')
     #st.title("Dimensionamento de Grampos")
 
