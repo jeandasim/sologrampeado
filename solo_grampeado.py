@@ -70,10 +70,11 @@ def calcular_qs(referencias, n_spt, d_furo):
     return results, Bond_str
 
 def main():
-    # Adicionando o código do Google Analytics
+    # Adicionando o código do Google Tag Manager (gtag.js)
     st.markdown(
         """
-        <script async src="https://www.googletagmanager.com/gtag/js?id=SEU_ID_ANALYTICS"></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J47G8X3JRX"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
