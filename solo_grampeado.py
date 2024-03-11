@@ -85,10 +85,13 @@ def main():
         """
         , unsafe_allow_html=True
     )
-
-    st.header('Dimensionamento de Grampos', divider='rainbow')
-    #st.title("Dimensionamento de Grampos")
-
+    st.subheader('', divider='rainbow')
+    st.header('Dimensionamento de Grampos para projetos de contenção')
+    st.write("_Autor_:_Jean Baptiste Joseph_.")
+    st.write("_E-mail_:_jean.joseph@aisimengenharia.com.br_")
+    st.write("_Empresa_:_AI SIM ENGENHARIA_.")
+    st.write("_Especialista em Soluções Geotécnicas_.")
+    st.subheader('', divider='rainbow')
     st.sidebar.title("Opções")
     calculadora_selecionada = st.sidebar.radio("Selecione a opção desejada:", ("Carga de trabalho Ft(Tensile Capacity kN)", "Adesão Solo-Grampo (Bond Stregth kN/m)"))
 
@@ -110,6 +113,7 @@ def main():
                     carga_trabalho = calcular_carga_trabalho(Diametro, espessura)
                     st.success(f"A espessura de sacrificio é: {espessura:.1f} mm")
                     st.success(f"A carga de trabalho é: {carga_trabalho:.1f} kN")
+                    st.write("Código em fase de desenvolvimento, Sempre é bom checar as respostas antes de usar.")   
                 else:
                     st.error("Combinação inválida de seleções.")
     elif calculadora_selecionada == "Adesão Solo-Grampo (Bond Stregth kN/m)":
@@ -140,6 +144,7 @@ def main():
                 }
                 df = pd.DataFrame(data)
                 st.table(df)
+                st.write("Código em fase de desenvolvimento, Sempre é bom checar as respostas antes de usar.")
             else:
                 st.error("Por favor, preencha todos os campos.")
 
